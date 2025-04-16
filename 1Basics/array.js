@@ -28,14 +28,20 @@ const flatSquare = arr.flatMap((num)=>[num,num**2]);
 const employers=[
     {
         name:"Janvi",
+        id:"103",
+        age:25,
         employees:["Kiara","Roshni","Krisha"]
     },
     {
         name:"Raj",
+        id:"101",
+        age:23,
         employees:["Savi","Meera"]
     },
     {
-        name:"Disha",
+        name:"Raj",
+        id:"102",
+        age:29,
         employees:["sakhi"]
     }
 ]
@@ -48,5 +54,20 @@ const flatMapEmployee=employers.flatMap((employer)=>employer.employees);
 
 users.splice(1,0,"Rani","Krish");
 const usersPart = users.slice(1,3);
-console.log(usersPart);
 
+//! Array Search 
+users.push("Krish");
+
+// console.log(users.lastIndexOf("Krish"));
+// console.log(users.indexOf("Krish"));
+// console.log(users.includes("Ram"));
+// console.log(users.at(2));
+
+
+const findId= employers.find((employer)=>employer["id"]==="101");
+const idx= employers.findIndex((employer)=>employer["name"]==="Raj");
+const lastIdx= employers.findLastIndex((employer)=>employer["name"]==="Raj");
+const lastof25= employers.findLast((employer)=>employer["age"]>=25);
+const up25= employers.filter((employer)=>employer["age"]>=25);
+// const up25= employers.map((employer)=>employer["age"]>=25);
+console.log(findId);

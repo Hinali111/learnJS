@@ -121,5 +121,59 @@ cars.sort((a,b)=>a.year-b.year);
 // .sort() modifies the original array ✅ Using slice() to Copy Before Sorting:
 const ageSorted= employers.slice().sort((a,b)=>a.age-b.age);
 const gpaSorted= employers.slice().sort((a,b)=>b.gpa-a.gpa);
-console.log(ageSorted);
-console.log(gpaSorted);
+// console.log(ageSorted);
+// console.log(gpaSorted);
+
+
+//! forEach()
+// const numbers = [2, 4, 6];
+// numbers.forEach((element, idx, arr) => {
+//     console.log(`Value: ${element}, Index: ${idx}, Array: ${arr}`);
+//   });
+
+// const arr =[1,2,3,4,5];
+//? arr.forEach((num)=>console.log(num*2));
+// arr.forEach(square1);
+function square1(num){
+    console.log(num**2);
+}
+// change array with forEach
+// arr.forEach((num,idx,arr)=>arr[idx]=num*2);
+// arr.forEach(triple);
+// arr.forEach(tenTimes);
+// arr.forEach(square2);
+arr.forEach(cube);
+function triple(num,idx,arr){
+    arr[idx]= num*3;
+}
+function tenTimes(num,idx,arr){
+    arr[idx]=num*10
+}
+function square2(num,idx,arr){
+    arr[idx]=Math.pow(num,2);
+}
+function cube(num,idx,arr){
+    arr[idx]=Math.pow(num,3);
+}
+// arr.forEach((num)=>console.log(num));
+
+// 
+users.forEach(upper2);
+users.forEach(lower2);
+users.forEach(capitalized);
+
+function upper2(element,idx,arr){
+    arr[idx]=element.toUpperCase();
+}
+function lower2(element,idx,arr){
+    arr[idx]=element.toLowerCase();
+}
+function capitalized(element,idx,arr){
+    arr[idx]= element.charAt(0).toUpperCase()+element.slice(1);
+}
+console.log(users);
+
+
+
+
+

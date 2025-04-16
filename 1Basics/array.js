@@ -18,4 +18,31 @@ const formatedDates= dates.map((date)=>{
     return `${parts[2]}/${parts[1]}/${parts[0]}`;
 })
 
-console.log(formatedDates);
+
+//!  flat
+const arrayOfArray =[[1,2,3],[1,2,6],[2,4,6]];
+const flatArray= arrayOfArray.flat();
+
+//flatMap -
+const flatSquare = arr.flatMap((num)=>[num,num**2]);
+console.log(flatSquare);
+const employers=[
+    {
+        name:"Janvi",
+        employees:["Kiara","Roshni","Krisha"]
+    },
+    {
+        name:"Raj",
+        employees:["Savi","Meera"]
+    },
+    {
+        name:"Disha",
+        employees:["sakhi"]
+    }
+]
+const employerNames= employers.map((employer)=>employer["name"]);
+const mapEmployee=employers.map((employer)=>employer.employees);
+const flatMapEmployee=employers.flatMap((employer)=>employer.employees);
+
+// console.log(mapEmployee);
+// console.log(flatMapEmployee);

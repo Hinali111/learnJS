@@ -25,7 +25,6 @@ const flatArray= arrayOfArray.flat();
 
 //flatMap -
 const flatSquare = arr.flatMap((num)=>[num,num**2]);
-console.log(flatSquare);
 const employers=[
     {
         name:"Janvi",
@@ -46,3 +45,8 @@ const flatMapEmployee=employers.flatMap((employer)=>employer.employees);
 
 // console.log(mapEmployee);
 // console.log(flatMapEmployee);
+
+users.splice(1,0,"Rani","Krish");
+const usersPart = users.slice(1,3);
+console.log(usersPart);
+

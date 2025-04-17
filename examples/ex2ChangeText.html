@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Change Text</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Change Text</h1>
+        <button id="changeBtn">Change text</button>
+        <p id="text">Hello World</p>
+        <script>
+            document.getElementById("changeBtn").onclick=()=>{
+                document.getElementById("text").textContent = "Hi welcome in the World of JS."
+                // document.getElementById("text").innerText = "Hi welcome in the World of JS."
+                // document.getElementById("text").innerHTML = "Hi welcome in the World of JS."
+            }
+        </script>
+        <script src="" async defer></script>
+    </body>
+</html>

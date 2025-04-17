@@ -173,7 +173,3 @@ function capitalized(element,idx,arr){
 }
 console.log(users);
 
-
-
-
-

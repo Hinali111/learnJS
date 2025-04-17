@@ -171,9 +171,26 @@ function lower2(element,idx,arr){
 function capitalized(element,idx,arr){
     arr[idx]= element.charAt(0).toUpperCase()+element.slice(1);
 }
-console.log(users);
+// console.log(users);
 
 
 
+//! filter()
+const num=[1,2,3,4,5,6,7,8,9,10,11,12,13,14];
+const even= num.filter((no)=>no%2===0);
+// console.log(even);
+const odd= num.filter((no)=>no%2!==0);
+// console.log(odd);
+ages=[12,34,35,29,10,24,27,25,21,16];
+const adults= ages.filter((age)=>age>=18);
+// console.log(adults);
 
+const employers25 = employers.filter((employer)=>employer.age>=25);
+// console.log(employers25);
 
+const words=["apple","orange","kiwi","banana","coconut","strawberry","blackberry"];
+const shortWords= words.filter((name)=>name.length<=6);
+// console.log(shortWords);
+const longWords= words.filter((name)=>name.length>6);
+// console.log(longWords);
+console.log();

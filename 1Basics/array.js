@@ -195,7 +195,7 @@ const longWords= words.filter((name)=>name.length>6);
 // console.log(longWords);
 
 
-// reduce()
+//! reduce()
 const numbers=[1,2,3,4,5,6,7,8,9,10]
 const total = numbers.reduce((total,no)=>total+no);
 const totalWith100 = numbers.reduce((total,no)=>total+no,100);
@@ -206,4 +206,4 @@ function getMax(s1,s2){
     return Math.max(s1,s2);
 }
 const minScore= scores.reduce((score1,score2)=>Math.min(score1,score2));
-console.log(minScore);
+// console.log(minScore); 

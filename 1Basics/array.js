@@ -193,4 +193,17 @@ const shortWords= words.filter((name)=>name.length<=6);
 // console.log(shortWords);
 const longWords= words.filter((name)=>name.length>6);
 // console.log(longWords);
-console.log();
+
+
+// reduce()
+const numbers=[1,2,3,4,5,6,7,8,9,10]
+const total = numbers.reduce((total,no)=>total+no);
+const totalWith100 = numbers.reduce((total,no)=>total+no,100);
+// console.log(`$${total.toFixed(2)}`);
+scores=[34,59,20,90,99,38,58,68,79];
+const maxScore= scores.reduce(getMax);
+function getMax(s1,s2){
+    return Math.max(s1,s2);
+}
+const minScore= scores.reduce((score1,score2)=>Math.min(score1,score2));
+console.log(minScore);

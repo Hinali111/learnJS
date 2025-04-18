@@ -39,8 +39,6 @@ const dataSet= new Set(data);
 const dataSet2= [...data] //second way
 console.log(dataSet2);  //dont return keys it returns whole element
 
-
-
 const names = [...data].map((data)=>data.name);
 console.log(names);
 

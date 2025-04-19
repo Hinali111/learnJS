@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>show Time</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <button id="timeBtn" type="button">Show Time</button>
+        <p id="display"></p>
+        
+        <script>
+            let btn = document.getElementById("timeBtn");
+            let display = document.getElementById("display");
+            btn.onclick= function(){
+                let date = new Date();
+                let currentTime = `${String(date.getHours()).padStart(2,"0")}:${String(date.getMinutes()).padStart(2,"0")}:${String(date.getSeconds()).padStart(2,"0")}`;
+                display.textContent = currentTime;
+            }
+        </script>
+        <script src="" async defer></script>
+    </body>
+</html>

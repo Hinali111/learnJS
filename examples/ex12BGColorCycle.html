@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>color pallate</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>Colors</h1>
+        <button id="colorBtn">Change Color</button>
+        <script>
+            let btn= document.getElementById("colorBtn");
+            // function num(min,max){
+            //     return Math.floor(Math.random()*(max-min+1))+min;
+            // }
+            const colors=["red","purple", "pink", "yellow", "teal", "cyan", "brown"];
+            let index=0;
+            btn.onclick = function(){
+                // let color = `rgb(${num(0,255)},${num(0,255)},${num(0,255)})`;
+                let color;
+                document.body.style.backgroundColor=colors[index];
+                // if(index<colors.length-1){
+                //     index++;
+                // }else{
+                //     index=0;
+                // }
+                index = (index + 1) % colors.length;
+            }
+        </script>
+        <script src="" async defer></script>
+    </body>
+</html>

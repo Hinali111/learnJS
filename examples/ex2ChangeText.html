@@ -13,11 +13,11 @@
         <button id="changeBtn">Change text</button>
         <p id="text">Hello World</p>
         <script>
-            document.getElementById("changeBtn").onclick=()=>{
+            document.getElementById("changeBtn").addEventListener("click",()=>{
                 document.getElementById("text").textContent = "Hi welcome in the World of JS."
                 // document.getElementById("text").innerText = "Hi welcome in the World of JS."
                 // document.getElementById("text").innerHTML = "Hi welcome in the World of JS."
-            }
+            })
         </script>
         <script src="" async defer></script>
     </body>

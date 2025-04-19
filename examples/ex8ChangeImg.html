@@ -5,16 +5,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>alertBtn</title>
+        <title>changeText</title>
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1>Alert Button</h1>
-        <button id="clickBtn">Show Alert</button>
-        <button id="clickBtn2">Alert2</button>
+        <h1>Text change on hover</h1>
+        <img src="./img/f1.png" id="image">
         <script>
-            document.getElementById("clickBtn").addEventListener("click",()=>{alert("Hello in JS World.")});
-            document.getElementById("clickBtn2").addEventListener("click",()=>{alert("Alert 2")});
+            let img=document.getElementById("image");
+            img.onmouseover = function(){
+                image.src="./img/f2.png";
+            }
+            img.onmouseout = function(){
+                image.src="./img/f1.png";
+            }
         </script>
         <script src="" async defer></script>
     </body>

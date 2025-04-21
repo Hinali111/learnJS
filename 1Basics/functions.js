@@ -10,7 +10,7 @@ const product = function(a,b){
 let res = product(10,2);
 // console.log(res);
 
-// self invoking function
+//! IIFE-  self invoking function
 (function () {
     let x = "Hello!!";  // I will invoke myself
     // console.log(x);
@@ -33,7 +33,7 @@ let text2 = myFunction(2,3).toString();
 // console.log(text);
 
 //! arrow function
-const addition =(a,b) => a+b;
+const addition =(a,b) => (a+b);
 const multiply =(a,b) => {return a*b};
 // console.log(addition(5,3));
 // console.log(multiply(5,3));

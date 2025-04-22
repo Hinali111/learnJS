@@ -1,6 +1,6 @@
-function add(a,b){
-    return a+b;
-}
+// function add(a,b){
+//     return a+b;
+// }
 // console.log(add(2,3));
 
 //!anonymous function  (a function without a name).
@@ -123,8 +123,21 @@ function secondInArr(arr){
 function outer(){
     const outerVar = 200;
     function inner(){
-        console.log(outerVar);
+        // console.log(outerVar);
     }
     inner();
 }
 outer();
+
+function add() {
+    let counter = 0;
+    function plus() {counter++;}
+    plus();   
+    plus();
+    plus();
+    plus();
+    plus();
+    return counter;
+  }
+let num0 = add();
+console.log(num0);

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Time Clock</title>
+        <link rel="stylesheet" href="">
+        <style>
+            body{
+                color: #fff;
+                background-color: #212121;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="h1">Time</h1>
+        <p id="time"></p>
+        <button id="stop">Stop Time</button>
+
+        <script>
+
+            setTimeout(()=>{
+                document.getElementById("h1").innerText= "Hello Time";
+            },5000);
+
+            let interval= setInterval(displayTime,1000);
+            function displayTime(){
+                const date =new Date();
+                const time = `${String(date.getHours()).padStart(2,"0")}:${String(date.getMinutes()).padStart(2,"0")}:${String(date.getSeconds()).padStart(2,"0")}\n${date.toLocaleTimeString()}`;
+
+                document.getElementById("time").innerText = time;
+            }
+            
+            const stopBtn = document.getElementById("stop");
+            stopBtn.addEventListener("click",function(){
+                clearInterval(interval);
+            })
+            
+        </script>
+    </body>
+</html>

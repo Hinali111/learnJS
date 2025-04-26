@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>cookies</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body style="background-color: #212121; color: #fff;">
+        <p id="demo"></p>
+        <script>
+            let cookie = document.cookie;
+            console.log(navigator.cookieEnabled);
+            document.cookie = "name=Meera; firstName=Meera;  lastName=Patel; expires=fri, 25 april 2025 3:21:00 UTC; path=/"
+            console.log(document.cookie);
+
+            setCookie("email","mee@gmail.com",365);
+            console.log(document.cookie);
+            
+            function setCookie(name, value, daysToLive){
+                const date = new Date();
+                date.setTime(date.getTime()+ daysToLive* 24* 60* 60 *1000)
+                let expires= `expires=${date.toUTCString()}`;
+                document.cookie = `${name}=${value}; ${expires}; path=/`
+            }
+            
+            // Local Storage
+            localStorage.setItem('name','Kiara');
+            localStorage.setItem('email','mee@gmail.com');
+            console.log(localStorage.getItem('name'));
+            console.log(localStorage.getItem('email'));
+            localStorage.removeItem('name');
+
+            sessionStorage.setItem('name','Raj');
+            sessionStorage.setItem('name','Zeel');
+
+
+            document.cookie = 'name=Zeel; expires=';
+        </script>
+        <script src="" async defer></script>
+    </body>
+</html>

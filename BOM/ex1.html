@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BOM</title>
+        <link rel="stylesheet" href="">
+    </head>
+    <body style="background-color: #212121; color: #fff;">
+        <h1></h1>
+        <script>
+            let w = window.innerWidth;
+            let h = window.innerHeight;
+            console.log(`Width = ${w}`);
+            console.log(`Height = ${h}`);
+            
+            // window.open() // open a new window
+            // window.close() // close the current window
+            // window.moveTo() // move the current window
+            // window.resizeTo() // resize the current window
+
+            // Screen
+            // screen.width           // full width of the screen in pixels
+            // screen.height          // full height of the screen in pixels
+            // screen.availWidth      // available screen width (excludes system UI like taskbar)
+            // screen.availHeight     // available screen height (excludes system UI like taskbar)
+            // screen.colorDepth      // number of bits used to display one color (usually 24 or 32)
+            // screen.pixelDepth      // number of bits per pixel on the screen (often same as colorDepth)
+
+
+            // window.location.href        // returns the full URL of the current page
+            // window.location.hostname    // returns the domain name (e.g., www.example.com)
+            // window.location.pathname    // returns the path and filename (e.g., /folder/page.html)
+            // window.location.protocol    // returns the protocol used (e.g., http: or https:)
+            // window.location.assign()    // loads a new document (same as setting href)
+
+
+            // History
+            // history.back()       // same as clicking the back button in the browser
+            // history.forward()    // same as clicking the forward button in the browser
+
+            // Navigator
+            // navigator.cookieEnabled    // returns true if cookies are enabled
+            // navigator.language         // returns the browser's language setting (e.g., "en-US")
+            // navigator.appName          // returns the name of the browser (usually "Netscape")
+
+            // alert("Hello!")           // shows a message box with "OK" button
+            // prompt("Enter name:")     // shows a box asking for user input and returns the input
+            // confirm("Are you sure?")  // shows a box with "OK" and "Cancel", returns true/false
+
+            fetch("https://dog.ceo/api/breeds/image/random")
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message); // This is the image URL
+                // You can also display it in an <img> tag
+                document.getElementById("dog").src = data.message;
+            });
+        </script>
+        <script src="" async defer></script>
+    </body>
+</html>
